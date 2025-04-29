@@ -1,8 +1,6 @@
 # obd-5262-trv
 
 ## Demo
----
-
 ### Basic Prompt Engineering
 1. Comments
 1. Suggestion Selector
