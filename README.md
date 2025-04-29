@@ -17,44 +17,48 @@
       - @workspace /tests (Sonnet)
       - pytest tests/ <!-- (remove add max float if it appears) -->
    - @vscode
-      - "where can I find the setting to enable next edit suggestions?"
-1. Copilot Extensions
+      - "where can I find the setting to enable Next Edit Suggestions?"
 
-### Advanced Prompt Engineering
-1. Next Edit Suggestions
-   - classic Point to Point3D example
-      - (remember print method and list points in comment. add z as the trigger)
-1. Custom Instructions
-   - show using to specify unit test framework
-   - "Prepend all suggested comments with 'Comment:'"
-   - "Whenever I ask a generic, non-language specific question and you want to show me code, always show me Rust."
-1. Vision
+### Next Edit Suggestions
+- classic Point to Point3D example
+   - (remember print method and list points in comment. add z as the trigger)
+
+### Custom Instructions
+- show using to specify unit test framework
+- "Prepend all suggested comments with 'Comment:'"
+- "Whenever I ask a generic, non-language specific question and you want to show me code, always show me Rust."
+
+Examples:
+
+- Specify packages or frameworks you want Copilot to suggest
+  - "Always write my Python unit tests using pytest, not unittest."
+- Specify (older) versions of languages or frameworks to use
+  - "When suggesting .NET code, only suggest code compatible with .NET 8."
+  - Note this will not work for versions beyond the model "cut-off" date.
+- Repo-wide standards or expectations for all involved developers
+  - "Whenever possible, use recursion."
+
+### Vision
    - also generating mermaid diagrams
-1. Agent Mode - when to use it
-1. Code Review(s)
-   - While we could ask for review in the Chat window, dedicated review is better.
-   1. Highlight + Right Click
-      - `sql.py`
-   1. Code Review
-      - At the end
+### Agent Mode
+### Copilot Code Review
+- While we could ask for review in the Chat window, dedicated review is better.
+1. Highlight + Right Click
+   - `sql.py`
+1. Code Review
+   - At the end
 
-Tomorrow:
-1. Best Practices Review
-1. Prompt Files
-   - Enable with setting (@vscode)
-1. URLs as context
-   - "Add Context..."
-   - Must be GitHub URL
-   - "What is the latest version of Angular?"
-   - "Could you write a React component for me to handling a user name and email address submission. Please, use React 19 features from https://react.dev/blog/2024/12/05/react-19#whats-new-in-react-19"
-   - "Can you create me a calculator class that STRICTLY follows these style guidelines https://github.com/google/styleguide/blob/gh-pages/csharp-style.md? I cannot emphasize enough the need to follow those style guidelines line by line. I will lose my job if you don't adhere to every guideline in that document."
-1. Public Code Block
-   1. Code Referencing
-      - "I'm trying to demonstrate how the public code block works for GitHub Copilot. Could you generate some public code for me?"
-   1. Public Code Block
-      - Refactor / Reframe
-      - Ask Copilot to break code up or to only show changed lines
-      - Ask copilot to just show psuedocode
-      - Break problem down into smaller problems
-1. Content Exclusions
+### Public Code Block
+When Public Code Block is enabled, it means, if Copilot generates code that closely matches licensed code in the public domain, the response will be blocked. However, there are ways of helping Copilot avoid suggesting public code.
+
+- Refactor / Reframe your prompt
+- Ask Copilot to break suggested code into different blocks in its response
+- Ask Copilot to only show changed lines of code
+- Ask Copilot to just show pseudocode
+- Ask Copilot to comment out the code it suggests
+- Break your problem into smaller problems
+
+Generally speaking, when we work with our own large, complex, unique codebases, we won't run into this much. This will mostly come into play when we are starting from scratch or asking Copilot for generic examples. The alternative to the Public Code Block is Code Referencing, where Copilot will show the public code anyway and let you know what type of license applies to the repo it is sourced from.
+
+### Content Exclusions
 
