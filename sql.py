@@ -1,5 +1,7 @@
 import sqlite3
 
+# acbdefghijk..
+
 def get_user(username):
     # WARNING: This is intentionally vulnerable to SQL injection!
     # Never use string formatting or concatenation with SQL queries in real code!
