@@ -1,4 +1,2 @@
-# THis file is just comments
-# this is a comment 
-# and this is a comment
-# Hello World!
+# hello world program in Python
+print("Hello, World!")
