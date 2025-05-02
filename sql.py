@@ -1,6 +1,6 @@
 import sqlite3
 
-# This script demonstrates a simple SQLite database interaction with a SQL injection vulnerability.
+# acbdefghijk..
 
 def get_user(username):
     # WARNING: This is intentionally vulnerable to SQL injection!
