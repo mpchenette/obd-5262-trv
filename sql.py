@@ -1,5 +1,7 @@
 import sqlite3
 
+# This script demonstrates a simple SQLite database interaction with a SQL injection vulnerability.
+
 def get_user(username):
     # WARNING: This is intentionally vulnerable to SQL injection!
     # Never use string formatting or concatenation with SQL queries in real code!
